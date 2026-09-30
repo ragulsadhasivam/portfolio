@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ragul Sadhasivam | UI/UX · Motion · Graphic Design</title>
+  <meta name="description" content="Portfolio of Ragul Sadhasivam, multidisciplinary designer specializing in UI/UX architecture, 3D motion design, and graphic brand systems. Follow the star.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232EE6A0'><polygon points='12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2'/></svg>">
+
+  <!-- Fonts: Manrope + Instrument Serif (Exact Milan Compain Pairing) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="locked has-cursor">
+
+  <!-- PRELOADER (Exact Milan Compain Loader) -->
+  <div id="loader">
+    <div class="ld-label">Ragul Sadhasivam</div>
+    <div class="ld-words">
+      <div class="ld-word on" id="ld-word-1">UI/UX DESIGN</div>
+      <div class="ld-word off" id="ld-word-2">3D MOTION</div>
+      <div class="ld-word off" id="ld-word-3">BRAND ARCHITECTURE</div>
+    </div>
+    <div class="ld-count" id="ld-counter">000</div>
+    <div class="ld-track">
+      <div class="ld-fill" id="ld-progress"></div>
+    </div>
+  </div>
+
+  <!-- CUSTOM MAGNETIC CURSOR -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+  <div id="cur-visit">
+    <div class="cv-in">
+      <svg viewBox="0 0 24 24">
+        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" fill="none"/>
+      </svg>
+      <span>EXPLORE</span>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN 3D CELESTIAL CANVAS (#cosmos) -->
+  <div id="cosmos" aria-hidden="true">
+    <canvas id="star-canvas"></canvas>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="nav">
+    <a href="#hero" class="nav-brand">RAGUL SADHASIVAM</a>
+    <div class="nav-links">
+      <a href="#hero" class="on" data-target="hero">Home</a>
+      <a href="#manifesto" data-target="manifesto">About</a>
+      <a href="#projHeader" data-target="projHeader">Projects</a>
+      <a href="#contact" data-target="contact">Contact</a>
+    </div>
+    <div class="nav-status">
+      <span class="status-indicator"></span>
+      <span class="status-text">Available for Q4/Q1</span>
+    </div>
+  </nav>
+  <div id="nav-dot"></div>
+
+  <!-- MAIN SCROLL STREAM -->
+  <div id="smooth-wrapper">
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <div class="hero-content">
+        <div class="hero-kicker">
+          <span class="status-indicator"></span>
+          <span>PRINCIPAL PRODUCT & MOTION DESIGNER</span>
+        </div>
+        <h1 class="hero-name">RAGUL SADHASIVAM</h1>
+        <div class="hero-sub">
+          <span class="sub-line">UI/UX Architecture</span>
+          <span class="sub-dot"> · </span>
+          <span class="sub-line">3D Motion</span>
+          <span class="sub-dot"> · </span>
+          <span class="sub-line">Brand Systems</span>
+        </div>
+        <div class="hero-tag serif">Follow the star. — Crafted with precision.</div>
+      </div>
+      <div class="hero-arrow" id="hero-arrow-btn" role="button" tabindex="0" aria-label="Scroll to About section">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT & DESIGNER BRIEF SECTION -->
+    <section class="about-zone" id="manifesto">
+      <div class="about-container">
+        
+        <!-- Section Header -->
+        <div class="about-header scroll-reveal">
+          <span class="section-kicker">01 / ABOUT & BRIEF</span>
+          <h2 class="serif">Splash Screens · Loader Animations · Product UX</h2>
+          <p class="about-lead">
+            Multidisciplinary mobile product designer specializing in high-impact application splash screens, kinetic vector loader animations, and end-to-end Figma UI architecture. Driven by tactile micro-interactions and uncompromising motion craft.
+          </p>
+          <div class="pc tl"></div>
+          <div class="pc tr"></div>
+          <div class="pc bl"></div>
+          <div class="pc br"></div>
+        </div>
+
+        <!-- Main Profile Grid: Portrait + In-depth Brief -->
+        <div class="about-grid">
+          
+          <!-- Column 1: Portrait Card -->
+          <div class="about-portrait-col scroll-reveal">
+            <div class="pcard about-portrait-card">
+              <div class="about-portrait-wrap">
+                <img src="./assets/ragul-portrait.jpg" alt="Ragul Sadhasivam - UI/UX, Splash Screens & Motion Designer" class="about-portrait-img">
+                <div class="portrait-status-pill">
+                  <span class="status-indicator"></span>
+                  <span>AVAILABLE FOR Q4 / Q1</span>
+                </div>
+              </div>
+              <div class="portrait-meta">
+                <div class="portrait-name">Ragul Sadhasivam</div>
+                <div class="portrait-title">Splash Screens · Loader Animations · Figma UX</div>
+                <div class="portrait-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>India · Collaborating Worldwide</span>
+                </div>
+              </div>
+              <!-- Iconic Milan Compain Bracket Corners -->
+              <div class="pc tl"></div>
+              <div class="pc tr"></div>
+              <div class="pc bl"></div>
+              <div class="pc br"></div>
+            </div>
+          </div>
+
+          <!-- Column 2: Comprehensive Designer Brief & Pillars -->
+          <div class="about-brief-col scroll-reveal">
+            <div class="brief-block">
+              <h3 class="brief-heading serif">Designer Brief & Motion Craft</h3>
+              <p class="brief-p">
+                I believe exceptional mobile experiences start before the first screen even renders. My practice focuses on engineering seamless app launch journeys—from fluid vector splash screens that dissolve into biometric unlocks, to rhythmic branded logo loaders and tactile in-app micro-interactions.
+              </p>
+              <p class="brief-p">
+                Working fluently between Figma, After Effects, and Lottie, I translate complex brand aesthetics into ultra-lightweight, 60fps kinetic UI systems. Whether architecting glove-friendly motorcycle navigation HUDs or precision environmental IoT interfaces, every curve, transition, and haptic beat is deliberately calibrated.
+              </p>
+            </div>
+
+            <!-- Core Disciplines Grid -->
+            <div class="brief-disciplines">
+              <div class="discipline-card scroll-reveal stagger-1">
+                <span class="disc-num">01</span>
+                <h4>App Splash Screens</h4>
+                <p>Cinematic app launch sequences, liquid vector geometry, brand reveals, and seamless onboarding transitions into login/auth states.</p>
+              </div>
+              <div class="discipline-card scroll-reveal stagger-2">
+                <span class="disc-num">02</span>
+                <h4>Loader & Micro-Animations</h4>
+                <p>Branded logo loader animations, Lottie JSON kinetic vectors, notification haptics, and zero-drop-frame state transitions.</p>
+              </div>
+              <div class="discipline-card scroll-reveal stagger-3">
+                <span class="disc-num">03</span>
+                <h4>Figma UI/UX Architecture</h4>
+                <p>Comprehensive mobile app design systems in Figma, component auto-layout architectures, interactive prototypes, and developer specs.</p>
+              </div>
+            </div>
+
+            <!-- Toolkit Strip -->
+            <div class="brief-tools scroll-reveal stagger-4">
+              <span class="tools-label">CORE TOOLKIT & DISCIPLINES</span>
+              <div class="tools-tags">
+                <span>Figma</span>
+                <span>After Effects</span>
+                <span>Lottie / Bodymovin</span>
+                <span>Cinema 4D</span>
+                <span>ProtoPie</span>
+                <span>Mobile Splash Screens</span>
+                <span>Loader Animations</span>
+                <span>UI Micro-Interactions</span>
+                <span>Design Tokens</span>
+                <span>Three.js / WebGL</span>
+              </div>
+            </div>
+
+            <!-- Corner Accents -->
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projHeader" class="projects-section">
+      <div class="projects-header-block scroll-reveal">
+        <span class="section-kicker">02 / MOTION CRAFT & REPERTOIRE</span>
+        <h2 class="serif">Featured Projects & Motion</h2>
+        <p class="proj-subtitle">Curated kinetic vector micro-interactions, app launch flows, and IoT telemetry architectures — 7 production motion pieces with zero static mockups.</p>
+      </div>
+
+      <div class="projects-feed">
+
+        <!-- PROJECT 1: NUCLYO SPLASH SCREEN -->
+        <article class="pcard-item scroll-reveal" data-project="nuclyo_splash">
+          <div class="pframe open-case-study" data-project="nuclyo_splash">
+            <div class="card-loader-line"><div class="card-loader-fill"></div></div>
+            
+            <div class="pvisual">
+              <div class="video-badge"><span class="rec-dot"></span><span>LIVE MOTION · 60 FPS</span></div>
+              <video src="./assets/nuclyo-splash-screen.mp4" loop muted playsinline poster="./assets/nuclyo-logo.png" preload="metadata"></video>
+              <div class="pvisual-hint"><span>CLICK TO EXPAND CASE STUDY ↗</span></div>
+            </div>
+
+            <div class="ptext">
+              <div class="ptext-header">
+                <span class="pindex">01 / 07</span>
+                <span class="psur">APP SPLASH SCREEN · AFTER EFFECTS · 2026</span>
+              </div>
+              <h3>Nuclyo Splash Screen</h3>
+              <p class="pdesc">
+                Cinematic vector splash screen animation designed for the Nuclyo smart clean-tech mobile ecosystem. Organic fluid motion transitions seamlessly into biometric authentication with zero cold-start delay.
+              </p>
+              <div class="ptags">
+                <span>After Effects</span>
+                <span>Lottie</span>
+                <span>Figma</span>
+                <span>App Onboarding</span>
+              </div>
+              <div class="pcard-action">
+                <span class="pbtn">View Case Study & Specs ↗</span>
+                <span class="pmetric">✦ 60 FPS Vector Precision · Sub-600ms Launch Flow</span>
+              </div>
+            </div>
+
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: NUCLYO LOGO LOADER (Reverse layout) -->
+        <article class="pcard-item reverse scroll-reveal" data-project="nuclyo_loader">
+          <div class="pframe open-case-study" data-project="nuclyo_loader">
+            <div class="card-loader-line"><div class="card-loader-fill"></div></div>
+            
+            <div class="pvisual">
+              <div class="video-badge"><span class="rec-dot"></span><span>LOTTIE VECTOR · 60 FPS</span></div>
+              <video src="./assets/nuclyo-loader-anim.mp4" loop muted playsinline poster="./assets/nuclyo-loader-poster.png" preload="metadata"></video>
+              <div class="pvisual-hint"><span>CLICK TO EXPAND CASE STUDY ↗</span></div>
+            </div>
+
+            <div class="ptext">
+              <div class="ptext-header">
+                <span class="pindex">02 / 07</span>
+                <span class="psur">LOADER ANIMATION · LOTTIE & KINETIC VECTOR · 2026</span>
+              </div>
+              <h3>Nuclyo Logo Loader</h3>
+              <p class="pdesc">
+                Dynamic vector logo loader animation with rhythmic ease-in-out bezier curves. Replaces traditional spinners with branded rotational morphing, exported to lightweight Lottie JSON for mobile & web apps.
+              </p>
+              <div class="ptags">
+                <span>After Effects</span>
+                <span>Bodymovin</span>
+                <span>Lottie JSON</span>
+                <span>Micro-Interactions</span>
+              </div>
+              <div class="pcard-action">
+                <span class="pbtn">View Case Study & Specs ↗</span>
+                <span class="pmetric">✦ 173 KB Stream Payload · 100% Vector Scalable</span>
+              </div>
+            </div>
+
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: RYDYT OUTLINE LOADER -->
+        <article class="pcard-item scroll-reveal" data-project="rydyt_loader">
+          <div class="pframe open-case-study" data-project="rydyt_loader">
+            <div class="card-loader-line"><div class="card-loader-fill"></div></div>
+            
+            <div class="pvisual">
+              <div class="video-badge"><span class="rec-dot"></span><span>VECTOR MICRO-MOTION</span></div>
+              <video src="./assets/rydyt-outline-loader.mp4" loop muted playsinline poster="./assets/rydyt-logo.png" preload="metadata"></video>
+              <div class="pvisual-hint"><span>CLICK TO EXPAND CASE STUDY ↗</span></div>
+            </div>
+
+            <div class="ptext">
+              <div class="ptext-header">
+                <span class="pindex">03 / 07</span>
+                <span class="psur">VECTOR LOADER · AFTER EFFECTS & LOTTIE · 2025</span>
+              </div>
+              <h3>RYDYT Outline Loader</h3>
+              <p class="pdesc">
+                Minimalist precision outline loader tracing the contours of the RYDYT badge. Engineered as a responsive micro-interaction for in-app telemetry loading, GPS lock states, and bike Bluetooth pairing.
+              </p>
+              <div class="ptags">
+                <span>After Effects</span>
+                <span>Lottie JSON</span>
+                <span>SVG Vectors</span>
+                <span>UI Micro-Interactions</span>
+              </div>
+              <div class="pcard-action">
+                <span class="pbtn">View Case Study & Specs ↗</span>
+                <span class="pmetric">✦ 183 KB Web Payload · Infinite Loop Synchronization</span>
+              </div>
+            </div>
+
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4: RYDYT COMPASS NAVIGATION HUD (Reverse layout) -->
+        <article class="pcard-item reverse scroll-reveal" data-project="rydyt_compass">
+          <div class="pframe open-case-study" data-project="rydyt_compass">
+            <div class="card-loader-line"><div class="card-loader-fill"></div></div>
+            
+            <div class="pvisual">
+              <div class="video-badge"><span class="rec-dot"></span><span>LIVE HUD MOTION · 60 FPS</span></div>
+              <video src="./assets/rydyt-compass-anim.mp4" loop muted playsinline poster="./assets/rydyt-logo.png" preload="metadata"></video>
+              <div class="pvisual-hint"><span>CLICK TO EXPAND CASE STUDY ↗</span></div>
+            </div>
+
+            <div class="ptext">
+              <div class="ptext-header">
+                <span class="pindex">04 / 07</span>
+                <span class="psur">INTERACTIVE HUD MOTION · UI/UX & MOTION · 2025</span>
+              </div>
+              <h3>RYDYT Compass Navigation</h3>
+              <p class="pdesc">
+                Real-time directional compass HUD animation designed for motorcycle handlebar mounts. Smooth rotational kinematics and dynamic waypoint pulse keep riders oriented at highway speeds without distraction.
+              </p>
+              <div class="ptags">
+                <span>HUD Design</span>
+                <span>After Effects</span>
+                <span>Figma</span>
+                <span>Cockpit Ergonomics</span>
+              </div>
+              <div class="pcard-action">
+                <span class="pbtn">View Case Study & Specs ↗</span>
+                <span class="pmetric">✦ Sub-1s Glanceable Readout · Night Mode Contrast</span>
+              </div>
+            </div>
+
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+        </article>
+
+        <!-- PROJECT 5: NUCLYO BLUETOOTH PAIRING -->
+        <article class="pcard-item scroll-reveal" data-project="nuclyo_bluetooth">
+          <div class="pframe open-case-study" data-project="nuclyo_bluetooth">
+            <div class="card-loader-line"><div class="card-loader-fill"></div></div>
+            
+            <div class="pvisual">
+              <div class="video-badge"><span class="rec-dot"></span><span>IOT HARDWARE SYNC</span></div>
+              <video src="./assets/nuclyo-bluetooth-anim.mp4" loop muted playsinline poster="./assets/nuclyo-logo.png" preload="metadata"></video>
+              <div class="pvisual-hint"><span>CLICK TO EXPAND CASE STUDY ↗</span></div>
+            </div>
+
+            <div class="ptext">
+              <div class="ptext-header">
+                <span class="pindex">05 / 07</span>
+                <span class="psur">IOT DEVICE PAIRING · AFTER EFFECTS & MOTION UX · 2025</span>
+              </div>
+              <h3>Nuclyo Bluetooth Pairing</h3>
+              <p class="pdesc">
+                Fluid wireless pulse and radar wave animation communicating IoT hardware synchronization. Reassures users during device discovery and provides unmistakable visual feedback upon connection.
+              </p>
+              <div class="ptags">
+                <span>IoT Pairing</span>
+                <span>Motion UX</span>
+                <span>Feedback Systems</span>
+                <span>Figma</span>
+              </div>
+              <div class="pcard-action">
+                <span class="pbtn">View Case Study & Specs ↗</span>
+                <span class="pmetric">✦ Sub-1.2s Discovery Feedback · Seamless Radar Loop</span>
+              </div>
+            </div>
+
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+        </article>
+
+        <!-- PROJECT 6: RYDYT BRAND MOTION SYSTEM (Reverse layout) -->
+        <article class="pcard-item reverse scroll-reveal" data-project="rydyt_branding">
+          <div class="pframe open-case-study" data-project="rydyt_branding">
+            <div class="card-loader-line"><div class="card-loader-fill"></div></div>
+            
+            <div class="pvisual">
+              <div class="video-badge"><span class="rec-dot"></span><span>BRAND MOTION · 60 FPS</span></div>
+              <video src="./assets/rydyt-branding.mp4" loop muted playsinline poster="./assets/rydyt-branding-poster.png" preload="metadata"></video>
+              <div class="pvisual-hint"><span>CLICK TO EXPAND CASE STUDY ↗</span></div>
+            </div>
+
+            <div class="ptext">
+              <div class="ptext-header">
+                <span class="pindex">06 / 07</span>
+                <span class="psur">BRAND MOTION IDENTITY · AFTER EFFECTS & VISUAL DESIGN · 2025</span>
+              </div>
+              <h3>RYDYT Brand Motion System</h3>
+              <p class="pdesc">
+                Kinetic brand motion identity showcase developed for RYDYT electric mobility. Combines high-octane typographic momentum, dynamic dimensional transitions, and custom audio-reactive easing curves for product reveals and digital brand touchpoints.
+              </p>
+              <div class="ptags">
+                <span>Brand Motion</span>
+                <span>After Effects</span>
+                <span>Visual Identity</span>
+                <span>Motion Design</span>
+              </div>
+              <div class="pcard-action">
+                <span class="pbtn">View Case Study & Specs ↗</span>
+                <span class="pmetric">✦ 14.7s Full Cinematic Reel · 60 FPS Fluid Kinetic Flow</span>
+              </div>
+            </div>
+
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+        </article>
+
+        <!-- PROJECT 7: BORN CREATIVE MOTION INTRO -->
+        <article class="pcard-item scroll-reveal" data-project="born_creative">
+          <div class="pframe open-case-study" data-project="born_creative">
+            <div class="card-loader-line"><div class="card-loader-fill"></div></div>
+            
+            <div class="pvisual">
+              <div class="video-badge"><span class="rec-dot"></span><span>STUDIO BRAND REEL</span></div>
+              <video src="./assets/born-creative-intro.mp4" loop muted playsinline preload="metadata"></video>
+              <div class="pvisual-hint"><span>CLICK TO EXPAND CASE STUDY ↗</span></div>
+            </div>
+
+            <div class="ptext">
+              <div class="ptext-header">
+                <span class="pindex">07 / 07</span>
+                <span class="psur">BRAND MOTION DESIGN · AFTER EFFECTS · 2025</span>
+              </div>
+              <h3>Born Creative Motion Intro</h3>
+              <p class="pdesc">
+                Kinetic brand identity reveal and studio intro animation with fluid typography, geometric pacing, and synchronized sound design across digital showcases and reel openers.
+              </p>
+              <div class="ptags">
+                <span>After Effects</span>
+                <span>Cinema 4D</span>
+                <span>Kinetic Type</span>
+                <span>Sound Sync</span>
+              </div>
+              <div class="pcard-action">
+                <span class="pbtn">View Case Study & Specs ↗</span>
+                <span class="pmetric">✦ 60 FPS Motion Cadence · High Retention Opener</span>
+              </div>
+            </div>
+
+            <div class="pc tl"></div>
+            <div class="pc tr"></div>
+            <div class="pc bl"></div>
+            <div class="pc br"></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (Exact Milan Compain Style) -->
+    <section id="contact" class="scroll-reveal">
+      <div class="line serif">Have a project in mind? Let’s create together.</div>
+      <div class="mail-wrap">
+        <a href="mailto:ragulsadhasivamm@gmail.com" class="mail" id="contact-mail">
+          ragulsadhasivamm@gmail.com
+        </a>
+        <div class="copy-toast" id="copy-toast">COPIED TO CLIPBOARD ✦</div>
+      </div>
+      <div class="mail-hint">Click anywhere to copy email address</div>
+
+      <div class="socials">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span> · </span>
+        <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+        <span> · </span>
+        <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a>
+        <span> · </span>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+      </div>
+
+      <footer>
+        <span>© 2026 RAGUL SADHASIVAM — UI/UX · 3D MOTION · GRAPHIC DESIGN</span>
+      </footer>
+    </section>
+
+  </div>
+
+  <!-- FIXED SCROLL STREAM PROGRESS HUD -->
+  <div id="scroll-hud">
+    <span class="hud-label">STREAM</span>
+    <div class="hud-bar"><div class="hud-fill" id="hud-progress"></div></div>
+    <span class="hud-section" id="hud-section-name">01 / ABOUT</span>
+  </div>
+
+  <!-- CASE STUDY DRAWER MODAL -->
+  <div class="case-modal-backdrop" id="case-modal" aria-hidden="true">
+    <div class="case-modal-container">
+      <button class="case-modal-close" id="case-modal-close" aria-label="Close Case Study">✕</button>
+      <div class="case-modal-body" id="case-modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
