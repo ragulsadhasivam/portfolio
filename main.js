@@ -247,7 +247,7 @@ function init3DCosmosStar() {
 
   // Generate spaced-out dots with GUARANTEED minimum distance (Dots NEVER touch one to one)
   const starDots = [];
-  const minDist = 0.44; // Generous physical gap between every single dot
+  const minDist = 0.32; // Calibrated physical gap between dots for high visibility without touching
   const minDistSq = minDist * minDist;
   const cellSize = minDist / Math.SQRT2;
   const gridW = Math.ceil((C * 2) / cellSize) + 8;
@@ -292,7 +292,7 @@ function init3DCosmosStar() {
 
     const rFrac = Math.sqrt((x * x) / (C * C) + (y * y) / (B * B));
     // Soft depth pillowing: flatter near tips, gently curved in body
-    const z = isPerimeter ? 0 : (Math.random() * 2 - 1) * nt * Math.max(0.08, 1.0 - rFrac * 0.7);
+    const z = isPerimeter ? 0 : (Math.random() * 2 - 1) * nt * Math.max(0.06, 1.0 - rFrac * 0.7);
 
     const newPt = { x, y, z };
     const idx = starDots.length;
@@ -303,12 +303,12 @@ function init3DCosmosStar() {
   }
 
   // 1. Trace the 4 tips & outer curves with spaced dots (NO lines, NO strokes, strictly spaced dots)
-  const perimeterSamples = 160;
+  const perimeterSamples = 200;
   for (let i = 0; i < perimeterSamples; i++) {
     const angle = (i / perimeterSamples) * Math.PI * 2;
     const cur = evalAstroid(angle, C, En);
-    const px = cur.dx * cur.r * 0.98;
-    const py = cur.dy * cur.r * 0.98;
+    const px = cur.dx * cur.r * 0.985;
+    const py = cur.dy * cur.r * 0.985;
     addPoint(px, py, true);
   }
 
@@ -325,11 +325,11 @@ function init3DCosmosStar() {
 
     for (let i = 0; i < k; i++) {
       const angle = Math.random() * Math.PI * 2;
-      const dist = minDist * (1.05 + Math.random() * 0.8);
+      const dist = minDist * (1.04 + Math.random() * 0.75);
       const nx = baseP.x + Math.cos(angle) * dist;
       const ny = baseP.y + Math.sin(angle) * dist;
 
-      if (!isInsideAstroid(nx, ny, 0.96)) continue;
+      if (!isInsideAstroid(nx, ny, 0.97)) continue;
       if (addPoint(nx, ny, false)) {
         found = true;
         break;
@@ -429,10 +429,10 @@ function init3DCosmosStar() {
         vec4 mv = modelViewMatrix * vec4(p, 1.0);
         float depth = max(-mv.z, 0.1);
 
-        float basePx = aSize * (uScale / depth) * 0.70;
-        gl_PointSize = clamp(basePx * uDpr, 1.8 * uDpr, 3.4 * uDpr);
+        float basePx = aSize * (uScale / depth) * 0.75;
+        gl_PointSize = clamp(basePx * uDpr, 2.0 * uDpr, 3.6 * uDpr);
 
-        float tw = 0.82 + 0.18 * sin(uTime * 2.2 + aPhase * 6.283);
+        float tw = 0.84 + 0.16 * sin(uTime * 2.2 + aPhase * 6.283);
         vAlpha = tw;
 
         gl_Position = projectionMatrix * mv;
@@ -450,11 +450,11 @@ function init3DCosmosStar() {
         if (dist > 0.5) discard;
 
         // Sub-pixel hardware-safe smooth circular space dot
-        float edge = smoothstep(0.5, 0.36, dist);
+        float edge = smoothstep(0.5, 0.35, dist);
 
-        // Concentrated pinpoint core
-        float core = exp(-dist * 7.5) * 1.2;
-        float intensity = edge * 0.70 + core;
+        // Concentrated luminous pinpoint core
+        float core = exp(-dist * 6.5) * 1.5;
+        float intensity = edge * 0.75 + core * 0.85;
 
         float a = clamp(intensity * vAlpha * uOpacity, 0.0, 1.0);
         if (a < 0.008) discard;

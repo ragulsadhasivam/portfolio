@@ -1,9 +1,10 @@
 # Ragul Sadhasivam — Portfolio
 
 > **Principal Product & Motion Designer**  
-> UI/UX Architecture · 3D Motion · Brand Systems
+> UI/UX Architecture · 3D Motion · Brand Systems  
+> **2+ Years Experience at Moai Consulting LLP (2024 — Present)**
 
-An interactive, high-performance portfolio featuring a 3D WebGL celestial element with non-touching space dots, fluid GSAP scroll choreography, and video-first kinetic design case studies.
+An interactive, high-performance portfolio featuring a 3D WebGL celestial element with non-touching space dots, fluid GSAP scroll choreography, and video-first kinetic design case studies. Reflects 2+ years of production experience leading mobile splash screens, loader animations, and end-to-end Figma UI architecture at **Moai Consulting LLP**.
 
 ---
 

@@ -648,7 +648,22 @@ nav {
   color: var(--em);
   text-transform: uppercase;
   font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.portrait-exp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--em);
+  font-weight: 600;
   margin-bottom: 0.8rem;
+  background: rgba(46, 230, 160, 0.08);
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  border: 1px solid rgba(46, 230, 160, 0.28);
 }
 
 .portrait-location {
@@ -778,6 +793,166 @@ nav {
   border-color: var(--em);
   color: #ffffff;
   background: rgba(46, 230, 160, 0.16);
+}
+
+/* --- PROFESSIONAL EXPERIENCE BLOCK --- */
+.about-experience {
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 11;
+}
+
+.exp-card {
+  background: rgba(13, 13, 13, 0.94);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  padding: 3rem 3.2rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  position: relative;
+  transition: border-color .35s var(--ease-out), transform .35s var(--ease-out);
+}
+
+.exp-card:hover {
+  border-color: rgba(46, 230, 160, 0.45);
+  transform: translateY(-2px);
+}
+
+.exp-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.6rem;
+}
+
+.exp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--em);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.exp-title-group h3 {
+  font-size: clamp(2rem, 3.6vw, 2.6rem);
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.exp-role {
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  color: #d8d8d8;
+  font-weight: 500;
+}
+
+.exp-tenure-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: rgba(22, 22, 22, 0.9);
+  border: 1px solid rgba(46, 230, 160, 0.32);
+  border-radius: 6px;
+  padding: 0.75rem 1.4rem;
+}
+
+.exp-years {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.exp-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--em);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.exp-summary {
+  font-size: 1.06rem;
+  line-height: 1.8;
+  color: #d6d6d6;
+  margin-bottom: 2.2rem;
+  max-width: 82ch;
+  font-weight: 400;
+}
+
+.exp-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.exp-highlight-item {
+  background: rgba(20, 20, 20, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 1.6rem;
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  transition: border-color .3s var(--ease-out), transform .3s var(--ease-out), background .3s var(--ease-out);
+}
+
+.exp-highlight-item:hover {
+  background: rgba(26, 26, 26, 0.98);
+  border-color: rgba(46, 230, 160, 0.45);
+  transform: translateY(-2px);
+}
+
+.exp-h-num {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--em);
+  padding-top: 2px;
+}
+
+.exp-h-content h5 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+}
+
+.exp-h-content p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #cccccc;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .about-experience {
+    margin-top: 2.5rem;
+  }
+  .exp-card {
+    padding: 2rem 1.4rem;
+  }
+  .exp-tenure-badge {
+    align-items: flex-start;
+    padding: 0.6rem 1rem;
+  }
+  .exp-summary {
+    font-size: 0.98rem;
+    margin-bottom: 1.8rem;
+  }
 }
 
 /* --- PROJECTS & MOTION REPERTOIRE SECTION (Compact Sleek Proportions) --- */
