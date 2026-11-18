@@ -69,7 +69,7 @@
   const setPose = (name) => { if (window.scene3d) window.scene3d.setPose(name); };
   const FACE = { smile: 'face1', calm: 'face2', laugh: 'face3', think: 'face4', focus: 'face5' };
   const STEPS = [
-    { t: '#top', pose: 'stand', face: 'smile', say: "Hi, I'm Ragul Sadhasivam, a motion and UI UX designer based in Hyderabad." },
+    { t: '#top', pose: 'stand', face: 'smile', say: "Hi, I'm Ragul Sadhasivam, a motion and UI UX designer based in Karur, Tamil Nadu." },
     { t: '#top', pose: 'point', face: 'focus', say: 'I design the screens of an app, then animate them in After Effects, so loaders, splash screens and pairing flows tell people what the product is doing.' },
     { t: '#work', pose: 'stand', face: 'calm', say: 'This is my selected work: six pieces of interface motion for Nuclyo and RYDYT, from a splash screen that flows into sign-in, to a compass for a motorcycle display.' },
     { t: '#about', pose: 'stand', face: 'smile', say: 'I work at Moai Consulting, designing in Figma and animating in After Effects, and I export Lottie files for developers.' },
@@ -136,11 +136,19 @@
     const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
     const key = () => {
       if (!ctx || av.readyState < 2) return;
-      const w = av.videoWidth, h = av.videoHeight; if (!w) return;
-      if (cv.width !== w) { cv.width = w; cv.height = h; }
+      const vw = av.videoWidth, vh = av.videoHeight; if (!vw) return;
+      // Key at the size the canvas is actually shown (capped at 1.5x for sharpness), not the full 1280x720:
+      // far fewer pixels to process per frame, which matters most on phones.
+      const want = Math.round(cv.clientWidth * Math.min(devicePixelRatio || 1, 1.5));
+      const w = want > 0 ? Math.min(vw, Math.max(480, want)) : vw, h = Math.round(w * vh / vw);
+      if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; }
       ctx.drawImage(av, 0, 0, w, h);
       const img = ctx.getImageData(0, 0, w, h), d = img.data;
-      if (!bg) { const p = ctx.getImageData(4, 4, 1, 1).data; bg = [p[0], p[1], p[2]]; }
+      if (!bg) { // average a small corner patch instead of trusting one pixel
+        const p = ctx.getImageData(2, 2, 8, 8).data; let r = 0, g = 0, b = 0;
+        for (let i = 0; i < p.length; i += 4) { r += p[i]; g += p[i + 1]; b += p[i + 2]; }
+        const n = p.length / 4; bg = [r / n, g / n, b / n];
+      }
       const br = bg[0], bgG = bg[1], bb = bg[2], bb2 = br * br + bgG * bgG + bb * bb;
       const floorFrom = w * Math.floor(h * 0.80) * 4;
       for (let i = 0; i < d.length; i += 4) {
